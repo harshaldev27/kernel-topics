@@ -567,6 +567,15 @@
 			compatible = "qcom,scm-sa8775p", "qcom,scm";
 			qcom,dload-mode = <&tcsr 0x13000>;
 		};
+
+		ice-pta-test {
+			compatible = "qcom,ice-pta-test";
+			clocks = <&gcc GCC_UFS_PHY_ICE_CORE_CLK>,
+				 <&gcc GCC_UFS_PHY_AHB_CLK>;
+			clock-names = "core", "iface";
+			power-domains = <&gcc UFS_PHY_GDSC>;
+			status = "okay";
+		};
 	};
 
 	clk_virt: interconnect-clk-virt {

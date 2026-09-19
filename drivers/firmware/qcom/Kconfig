@@ -34,6 +34,7 @@ config QCOM_ICE_SERVICE
 
 config QCOM_SCM
 	select QCOM_PAS
+	select QCOM_ICE_SERVICE
 	select QCOM_TZMEM
 	tristate
 

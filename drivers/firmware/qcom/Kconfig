@@ -24,6 +24,14 @@ config QCOM_PAS_TEE
 	  Enable the generic Peripheral Authentication Service (PAS) provided
 	  by the firmware TEE implementation as the backend.
 
+config QCOM_ICE_SERVICE
+	tristate
+	help
+	  Enable the generic Inline Crypto Engine (ICE) service provided by
+	  firmware. It acts as a common layer with different TZ backends
+	  plugged in whether it's an SCM implementation or a TEE bus based
+	  ICE service implementation.
+
 config QCOM_SCM
 	select QCOM_PAS
 	select QCOM_TZMEM

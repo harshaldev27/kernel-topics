@@ -12,3 +12,4 @@ obj-$(CONFIG_QCOM_MEMORY_DUMP_V2) += memory_dump_v2.o
 obj-$(CONFIG_QCOM_MEMORY_DUMP_DEV) += memory_dump_dev.o
 obj-$(CONFIG_QCOM_PAS)		+= qcom_pas.o
 obj-$(CONFIG_QCOM_PAS_TEE)	+= qcom_pas_tee.o
+obj-$(CONFIG_QCOM_ICE_SERVICE)	+= qcom_ice.o

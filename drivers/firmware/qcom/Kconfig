@@ -32,6 +32,16 @@ config QCOM_ICE_SERVICE
 	  plugged in whether it's an SCM implementation or a TEE bus based
 	  ICE service implementation.
 
+config QCOM_ICE_TEE
+       tristate
+       select QCOM_ICE_SERVICE
+       depends on TEE
+       depends on !CPU_BIG_ENDIAN
+       default m if ARCH_QCOM
+       help
+         Enable the generic Inline Crypto Engine (ICE) firmware service TEE
+         implementation as a backend.
+
 config QCOM_SCM
 	select QCOM_PAS
 	select QCOM_ICE_SERVICE
